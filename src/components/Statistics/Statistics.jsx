@@ -1,19 +1,22 @@
+import { StatisticItem, StatisticList } from "./Statistics.styled";
+
+
 export const Statistics = ({ good, neutral, bad, total, positivePersentage }) => (
-  <ul>
-    <li>
+  <StatisticList>
+    <StatisticItem>
       <p>Good: {good}</p>
-    </li>
-    <li>
+    </StatisticItem>
+    <StatisticItem>
       <p>Neutral: {neutral}</p>
-    </li>
-    <li>
+    </StatisticItem>
+    <StatisticItem>
       <p>Bad: {bad}</p>
-    </li>
-    <li>
+    </StatisticItem>
+    <StatisticItem>
       <p>Total: {total()}</p>
-    </li>
-    <li>
+    </StatisticItem>
+    <StatisticItem>
       <p>Positive feedback: {positivePersentage()} %</p>
-    </li>
-  </ul>
+    </StatisticItem>
+  </StatisticList>
 );

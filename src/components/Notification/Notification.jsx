@@ -1,2 +1,2 @@
-export const Notification = ({ message }) =>  <p>{ message}</p>
+export const Notification = ({ message }) =>  <h3>{ message}</h3>
  

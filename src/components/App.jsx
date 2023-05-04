@@ -49,7 +49,7 @@ export class App extends Component {
               onClick={ this.handelClickBtn}
             ></Statistics>
           ) : (
-            <Notification message="There is no feedback"></Notification>
+            <Notification message="There is no feedback yet"></Notification>
           )}
         </Section>
       </>
