@@ -21,15 +21,15 @@ export class App extends Component {
     Object.values(this.state).reduce((acc, value) => value + acc, 0);
 
   countPositiveFeedbackPersentage = () => {
-    const total = this.countTotalFeedback;
+    const total = this.countTotalFeedback();
     const positivePersentage = Math.round((this.state.good / total) * 100);
     return total > 0 ? positivePersentage : 0;
   };
 
   render() {
     const { good, neutral, bad } = this.state;
-    const total = this.countTotalFeedback;
-    const positivePersentage = this.countPositiveFeedbackPersentage;
+    const total = this.countTotalFeedback();
+
     return (
       <>
         <Section title="Please leave feedback">
@@ -45,7 +45,7 @@ export class App extends Component {
               neutral={neutral}
               bad={bad}
               total={total}
-              positivePersentage={positivePersentage}
+              positivePersentage={this.countPositiveFeedbackPersentage}
               onClick={ this.handelClickBtn}
             ></Statistics>
           ) : (
