@@ -44,7 +44,7 @@ export class App extends Component {
               good={good}
               neutral={neutral}
               bad={bad}
-              total={total}
+              total={this.countTotalFeedback}
               positivePersentage={this.countPositiveFeedbackPersentage}
               onClick={ this.handelClickBtn}
             ></Statistics>
